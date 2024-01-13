@@ -1,0 +1,14 @@
+<div class="navbar">
+    <div class="navbar-logo"><img src="./assets/frontend/dictionary.svg" width="40px" height="40px" alt="dictionary"></div>
+    <div class="navbar-font"></div>
+    <div class="navbar-theme">
+        <div class = 'toggle-switch'>
+            <label>
+                <input type = 'checkbox' (click)="toggleTheme()">
+                <span class = 'slider'></span>
+            </label>
+        </div>
+        <img *ngIf="theme === 'dark'" width="24px" height="24px" src="./assets/frontend/moon.svg" alt="moon">
+        <img *ngIf="theme === 'light'" width="24px" height="24px" src="./assets/frontend/sun.svg" alt="sun">
+    </div>
+</div>

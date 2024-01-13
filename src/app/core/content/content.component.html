@@ -1,0 +1,25 @@
+<div *ngIf="sharedData">
+    <h1 class="title">{{sharedData.word}}</h1>
+    <h2 class="phonetic">{{sharedData.phonetic}}</h2>
+    <div class="subtitle-grid">
+        <h3 class="subtitle">{{sharedData.meanings[0].partOfSpeech}}</h3>
+        <div class="subtitle-line">
+            <div class="line"></div>
+        </div>
+    </div>
+    <h4 class="subtitle-light">Définition</h4>
+    <div *ngFor="let definition of sharedData.meanings[0].definitions" class="explanation-item">
+        {{definition.definition}}</div>
+
+
+    <div class="subtitle-grid">
+        <h3 class="subtitle">{{sharedData.meanings[1].partOfSpeech}}</h3>
+        <div class="subtitle-line">
+            <div class="line"></div>
+        </div>
+    </div>
+    <h4 class="subtitle-light">Définition</h4>
+    <div *ngFor="let definition of sharedData.meanings[1].definitions" class="explanation-item">
+        {{definition.definition}}</div>
+    <h6 class="source"><a [href]="sharedData.sourceUrls">Source Wiki</a></h6>
+</div>

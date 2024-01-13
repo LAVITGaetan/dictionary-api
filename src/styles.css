@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Lora;
+}
+
+@font-face {
+    font-family: Lora;
+    src: url(./assets/fonts/Lora/Lora-VariableFont_wght.ttf);
+}
+
+:root {
+    --clr-background: #ffffff;
+    --clr-light: #f4f4f4;
+    --clr-grey: #757575;
+    --clr-text: #323232;
+    --clr-text-light: #a1a1a1;
+    --clr-accent: #a545ee;
+}
+
+body.dark-theme {
+    --clr-background: #050505;
+    --clr-light: #1f1f1f;
+    --clr-grey: #777777;
+    --clr-text: #f4f4f4;
+    --clr-text-light: #a1a1a1;
+    --clr-accent: #a545ee;
+}
+
+body {
+    background-color: var(--clr-background);
+    padding-bottom: 100px;
+}
+
+.layout {
+    max-width: 800px;
+    margin: auto;
+}
+
+@media screen and (max-width:860px) {
+    .layout {
+        width: 100%;
+        padding: 0 8%;
+    }
+}
